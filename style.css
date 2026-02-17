@@ -88,17 +88,17 @@ th, td {
 }
 
 th {
-  background: linear-gradient(90deg, #ff00ff, #b300ff);
+  background: linear-gradient(90deg, #ff00ff, #1d0029);
   color: white;
   font-weight: bold;
 }
 
 tr:nth-child(even) {
-  background: rgba(255, 0, 255, 0.08);
+  background: rgba(255, 0, 255, 0.3);
 }
 
 tr:nth-child(odd) {
-  background: rgba(255,255,255,0.03);
+  background: rgba(255,255,255,0.3);
 }
 
 td {
