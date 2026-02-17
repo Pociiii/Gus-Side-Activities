@@ -5,7 +5,7 @@ body {
 
   background-image:
     linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
-    url("images/DDC_logo.png");
+    url("Images/DDC_logo.png");
 
   background-size: cover;
   background-position: center;
@@ -61,7 +61,7 @@ main {
 .panel {
   background-image:
     linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)),
-    url("images/DDC_Graffiti_1.png");
+    url("Images/DDC_Graffiti_1.png");
 
   background-size: cover;
   background-position: center;
