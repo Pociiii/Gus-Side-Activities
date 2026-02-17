@@ -1,9 +1,17 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #000;
   color: white;
+
+  background-image:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+    url("images/DDC_logo.png");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
+
 
 .wrapper {
   max-width: 1100px;
@@ -51,12 +59,20 @@ main {
 
 /* Panels */
 .panel {
-  background: rgba(255,255,255,0.03);
+  background-image:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)),
+    url("images/DDC_Graffiti_1.png");
+
+  background-size: cover;
+  background-position: center;
+
   border: 1px solid #c300ff;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 0 15px rgba(195,0,255,0.4);
+  box-shadow: 0 0 20px rgba(195,0,255,0.45);
+  backdrop-filter: blur(4px);
 }
+
 
 .panel h2 {
   color: #c300ff;
