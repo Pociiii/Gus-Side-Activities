@@ -109,12 +109,13 @@ table {
   width: 100%;
   border-collapse: collapse;
   font-size: 12px;
+  
 }
 
 th, td {
   border: 1px solid #c300ff;
   padding: 10px;
-  text-align: left;
+  text-align: center;
 }
 
 th {
@@ -133,6 +134,7 @@ tr:hover {
 
 td {
   color: #f2f2f2;
+
 }
 
 td:first-child {
