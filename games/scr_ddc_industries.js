@@ -1,6 +1,6 @@
 // ===== CORE STATE =====
 
-let credits = 500;
+let credits = 1000;
 let tier = 1;
 
 let speedLevel = 0;
@@ -11,10 +11,10 @@ let productionTimer = 0;
 let inventory = 0;
 let itemsSold = 0;
 
-let baseDemand = 35;
+let baseDemand = 40;
 
 let saleTimer = 0;
-let baseSaleInterval = 4;
+let baseSaleInterval = 3.5;
 
 let advertisingLevel = 0;
 let logisticsLevel = 0;
@@ -30,7 +30,7 @@ function getProductionCost() {
 }
 
 function getSellPrice() {
-  return getProductionCost() * 1.45;
+  return getProductionCost() * 1.8;
 }
 
 function getSellChance() {
@@ -46,7 +46,7 @@ function getTierCost() {
 }
 
 function getDemand() {
-  return baseDemand * Math.pow(1.035, advertisingLevel);
+  return baseDemand * Math.pow(1.025, advertisingLevel);
 }
 
 function getLogisticsCost() {
@@ -282,7 +282,7 @@ function loadGame() {
 
   const data = JSON.parse(saved);
 
-  credits = data.credits ?? 500;
+  credits = data.credits ?? 1000;
   tier = data.tier ?? 1;
   speedLevel = data.speedLevel ?? 0;
   inventory = data.inventory ?? 0;
@@ -296,7 +296,7 @@ function resetGame() {
 
   localStorage.removeItem("ddcIndustriesSave");
 
-  credits = 500;
+  credits = 1000;
   tier = 1;
   speedLevel = 0;
   advertisingLevel = 0;
