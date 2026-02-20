@@ -101,6 +101,13 @@ p {
   line-height: 1.7;
 }
 
+hr {
+  border: none;
+  height: 1px;
+  background: var(--glow-soft);
+  margin: 20px 0;
+}
+
 li {
   color: #dddddd;
   font-size: 15px;
@@ -138,6 +145,13 @@ main {
   gap: 20px;
 }
 
+.small-note {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-top: 8px;
+  text-align: center;
+}
+
 /* HERO */
 .hero {
   display: flex;
@@ -173,6 +187,11 @@ header p {
 .panel h2 {
   color: var(--accent-soft);
   text-shadow: 0 0 6px rgba(255,0,200,0.4);
+}
+
+.panel hr {
+  margin: 12px 0;
+  opacity: 0.2;
 }
 
 /* TABLE */
@@ -475,6 +494,73 @@ a:hover {
   color: var(--accent-soft);
 }
 
+.upgrades-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 280px;
+}
+
+.upgrade-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(255, 0, 150, 0.05);
+  border: 1px solid rgba(255, 0, 150, 0.2);
+}
+
+.upgrade-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.upgrade-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.upgrade-level {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.upgrades-panel button {
+  padding: 6px 14px;
+  font-size: 12px;
+  min-width: 110px;
+  border-radius: 20px;
+}
+
+.upgrades-panel .upgrade-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.upgrades-panel button {
+  padding: 6px 12px;
+  font-size: 13px;
+  width: auto;
+  min-width: 140px;
+}
+
+.upgrades-panel span {
+  margin-left: 8px;
+  opacity: 0.8;
+}
+.explanation-panel p {
+  font-size: 14px;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+.explanation-panel strong {
+  color: #ff00cc;
+}
 /* ===== PROGRESS BAR ===== */
 
 .progress-container {
@@ -492,6 +578,10 @@ a:hover {
   background: linear-gradient(90deg, #ff00cc, #ff4ddb);
   box-shadow: 0 0 8px #ff00cc;
   transition: width 0.1s linear;
+}
+.sale-bar {
+  background: linear-gradient(90deg, #00c3ff, #00ffcc);
+  box-shadow: 0 0 6px #00ffcc;
 }
 
 /* Mobile */
