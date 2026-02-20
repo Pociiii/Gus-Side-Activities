@@ -222,14 +222,17 @@ function updateUI() {
 
     document.getElementById("logisticsLevel").innerText = logisticsLevel;
 
-document.getElementById("logisticsBtn").innerText =
+  document.getElementById("logisticsBtn").innerText =
   formatNumber(getLogisticsCost());
 
-document.getElementById("logisticsBtn").disabled =
+  document.getElementById("logisticsBtn").disabled =
   credits < getLogisticsCost();
 
   document.getElementById("saleIntervalValue").innerText =
   getSaleInterval().toFixed(2);
+
+  document.getElementById("outputValue").innerText =
+  getProductionOutput();
 }
 
 function updateSaleProgressBar(percent) {
