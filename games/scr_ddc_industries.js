@@ -57,17 +57,12 @@ function getSaleInterval() {
   return baseSaleInterval * Math.pow(0.99, logisticsLevel);
 }
 
-function getProductionOutput() {
-  // guaranteed bonus every 10 tiers
-  let guaranteed = Math.floor(tier / 10);
+function getGuaranteedOutput() {
+  return 1 + Math.floor(tier / 10);
+}
 
-  // small chance bonus based on tier
-  let chance = tier * 0.015; // 2% per tier
-
-  let extra = 0;
-  if (Math.random() < chance) extra++;
-
-  return 1 + guaranteed + extra;
+function getBonusOutputChance() {
+  return tier * 2; // percent
 }
 
 
@@ -83,7 +78,15 @@ function gameLoop(delta) {
 
     if (credits >= cost) {
       credits -= cost;
-      inventory += getProductionOutput();
+      
+      let produced = getGuaranteedOutput();
+
+      if (Math.random() < getBonusOutputChance() / 100) {
+        produced++;
+      }
+
+      inventory += produced;
+
     }
   }
 
@@ -232,7 +235,7 @@ function updateUI() {
   getSaleInterval().toFixed(2);
 
   document.getElementById("outputValue").innerText =
-  getProductionOutput();
+  getGuaranteedOutput() + " + " + getBonusOutputChance() + "%";
 }
 
 function updateSaleProgressBar(percent) {
