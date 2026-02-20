@@ -54,7 +54,7 @@ function getDemand() {
 }
 
 function getLogisticsCost() {
-  return 200 * Math.pow(1.9, logisticsLevel);
+  return 200 * Math.pow(1.4, logisticsLevel);
 }
 
 function getSaleInterval() {
@@ -70,7 +70,7 @@ function getBonusOutputChance() {
 }
 
 function getAdvertisingCost() {
-  return 100 * Math.pow(1.6, advertisingLevel);
+  return 100 * Math.pow(1.3, advertisingLevel);
 }
 
 function getPrestigeGain() {
