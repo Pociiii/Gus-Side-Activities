@@ -103,24 +103,17 @@ function gameLoop(delta) {
 }
 
 function attemptSales() {
-  let chance = getSellChance();
-  let soldThisTick = 0;
+  if (inventory <= 0) return;
 
-  for (let i = 0; i < inventory; i++) {
-    if (Math.random() < chance) soldThisTick++;
-  }
-
-  if (soldThisTick > 0) {
-    inventory -= soldThisTick;
-
-    let gross = soldThisTick * getSellPrice();
-    credits += gross;
-    itemsSold += soldThisTick;
+  if (Math.random() < getSellChance()) {
+    inventory--;
+    credits += getSellPrice();
+    itemsSold++;
   }
 }
 
-  let lastTime = Date.now();
-  let autoSaveTimer = 0;
+let lastTime = Date.now();
+let autoSaveTimer = 0;
 
 function mainLoop() {
 
