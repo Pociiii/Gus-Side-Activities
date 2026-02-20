@@ -590,6 +590,27 @@ a:hover {
   color: #ff00cc;
 }
 
+.system-info {
+  font-size: 13px;
+  opacity: 0.75;
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+.reset-btn {
+  background: #330000;
+  border: 1px solid #aa0000;
+  color: #ff6666;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.reset-btn:hover {
+  background: #550000;
+}
+
 /* ===== PROGRESS BAR ===== */
 .progress-container {
   width: 100%;
