@@ -271,7 +271,8 @@ function updateUI() {
   document.getElementById("prestigeGain").innerText = getPrestigeGain();
 
   document.getElementById("saleCapacity").innerText =
-  getGuaranteedSales() + " + " + getBonusSaleChance() + "%";
+  getGuaranteedSales() + " + " +
+  getBonusSaleChance().toFixed(1) + "%";
 
 }
 
