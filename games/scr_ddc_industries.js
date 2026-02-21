@@ -26,7 +26,7 @@ let lifetimeSold = 0;
 
 function getProductionTime() {
   return baseProductionTime *
-    Math.pow(0.96, speedLevel) * Math.pow(0.98, influence);
+    Math.pow(0.96, speedLevel);
 }
 
 function getBaseProductionValue() {
@@ -43,12 +43,16 @@ function getProductionCost() {
 function getSellPrice() {
   return Math.round(
     getBaseProductionValue() * 1.55 *
-    (1 + advertisingLevel * 0.002)
+    (1 + advertisingLevel * 0.002) *
+    (1 + influence * 0.003)
   );
 }
 
 function getSellChance() {
-  return getDemand() / 100;
+  return Math.min(0.99,
+    (getDemand() / 100) +
+    influence * 0.002
+  );
 }
 
 function getSpeedCost() {
@@ -86,7 +90,8 @@ function getGuaranteedSales() {
 }
 
 function getBonusSaleChance() {
-  return advertisingLevel * 0.35; // % chance
+  return advertisingLevel * 0.35 +
+         influence * 0.25;
 }
 
 function getAdvertisingCost() {
